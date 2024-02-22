@@ -3,7 +3,8 @@ export {
   gutterBall,
   spareFrame,
   singleStrikeFrame,
-  doubleStrikeFrame
+  doubleStrikeFrame,
+  scoreGame
 };
 
 function gutterBall(frame) {
@@ -31,3 +32,5 @@ function doubleStrikeFrame(frame) {
       return frame[i][0] + frame[i + 1][0] + frame[i + 2][0];
     }
 }
+
+function scoreGame(game) {}

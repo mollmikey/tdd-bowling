@@ -37,8 +37,9 @@ test('single strike frame', () => {
     [10, 0],
     [5, 2]
   ];
-  const expected = frame[0][0] + frame[1][0] + frame[1][1];
+  const expected = 17;
   const actual = score.singleStrikeFrame(frame);
+
   expect(actual).toBe(expected);
 });
 
@@ -48,8 +49,9 @@ test('double strike frame', () => {
     [10, 0],
     [5, 2]
   ];
-  const expected = frame[0][0] + frame[1][0] + frame[2][0];
+  const expected = 25;
   const actual = score.doubleStrikeFrame(frame);
+
   expect(actual).toBe(expected);
 });
 
@@ -66,8 +68,7 @@ test('score entire game', () => {
     [5, 5],
     [6, 4]
   ];
-  const expected =
-    5 + 4 + 5 + 5 + 10 + 10 + 5 + 2 + 5 + 5 + 6 + 4 + 10 + 5 + 5 + 6 + 4;
+  const expected = 124;
   const actual = score.scoreGame(game);
   expect(actual).toBe(expected);
 });
