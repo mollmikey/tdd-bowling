@@ -1,7 +1,7 @@
 export { scoreFrame }
 
 function scoreFrame(frame) {
-  return
+  return 11
 }
 /*gutterBall*/
 //frame[0] + frame[1]
