@@ -31,3 +31,14 @@ test('a spare frame', () => {
 
   expect(actual).toBe(expected)
 })
+
+test('single strike frame', () => {
+  const frame = [
+    [10, 0],
+    [5, 2],
+  ]
+  const expected = 17
+  const actual = score.scoreFrame(frame)
+
+  expect(actual).toBe(expected)
+})
