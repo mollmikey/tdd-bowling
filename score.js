@@ -1,5 +1,6 @@
 export { scoreFrame }
 
 function scoreFrame(frame) {
-  return frame[0] + frame[1]
+  return frame.reduce((a, c) => a + c, 0)
 }
+//frame[0] + frame[1]

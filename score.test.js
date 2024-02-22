@@ -14,8 +14,8 @@ test('score a gutterball frame', () => {
 })
 
 test('a normal frame', () => {
-  const frame = [5, 2]
-  const expected = 7
+  const frame = [5, 4]
+  const expected = 9
   const actual = score.scoreFrame(frame)
 
   expect(actual).toBe(expected)
