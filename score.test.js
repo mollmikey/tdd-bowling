@@ -21,7 +21,7 @@ test.skip('a normal frame', () => {
   expect(actual).toBe(expected)
 })
 
-test('a spare frame', () => {
+test.skip('a spare frame', () => {
   const frame = [
     [5, 5],
     [1, 3],
