@@ -5,15 +5,15 @@ test.skip('test setup working', () => {
   expect(true).toBeTruthy();
 });
 
-test.skip('score a gutterball frame', () => {
+test('score a gutterball frame', () => {
   const frame = [0, 0];
   const expected = 0;
-  const actual = score.scoreFrame(frame);
+  const actual = score.gutterBall(frame);
 
   expect(actual).toBe(expected);
 });
 
-test.skip('a normal frame', () => {
+test('a normal frame', () => {
   const frame = [5, 4];
   const expected = 9;
   const actual = score.scoreFrame(frame);
@@ -21,24 +21,24 @@ test.skip('a normal frame', () => {
   expect(actual).toBe(expected);
 });
 
-test.skip('a spare frame', () => {
+test('a spare frame', () => {
   const frame = [
     [5, 5],
     [1, 3]
   ];
   const expected = 11;
-  const actual = score.scoreFrame(frame);
+  const actual = score.spareFrame(frame);
 
   expect(actual).toBe(expected);
 });
 
-test.skip('single strike frame', () => {
+test('single strike frame', () => {
   const frame = [
     [10, 0],
     [5, 2]
   ];
   const expected = frame[0][0] + frame[1][0] + frame[1][1];
-  const actual = score.scoreFrame(frame);
+  const actual = score.singleStrikeFrame(frame);
   expect(actual).toBe(expected);
 });
 
@@ -49,6 +49,6 @@ test('double strike frame', () => {
     [5, 2]
   ];
   const expected = frame[0][0] + frame[1][0] + frame[2][0];
-  const actual = score.scoreFrame(frame);
+  const actual = score.doubleStrikeFrame(frame);
   expect(actual).toBe(expected);
 });
