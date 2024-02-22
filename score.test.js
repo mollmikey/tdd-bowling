@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import * as score from './score' // this is the line to add
+import * as score from './score'
 
 test.skip('test setup working', () => {
   expect(true).toBeTruthy()
