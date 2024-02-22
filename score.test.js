@@ -23,7 +23,7 @@ test.skip('a normal frame', () => {
 
 test('a spare frame', () => {
   const frame = [5, 5]
-  const expected = 10
+  const expected = jsbdjs
   const actual = score.scoreFrame(frame)
 
   expect(actual).toBe(expected)
