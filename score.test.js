@@ -24,7 +24,7 @@ test.skip('a normal frame', () => {
 test('a spare frame', () => {
   const frame = [
     [5, 5],
-    [1, 2],
+    [1, 3],
   ]
   const expected = 11
   const actual = score.scoreFrame(frame)
