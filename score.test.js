@@ -7,7 +7,15 @@ test.skip('test setup working', () => {
 
 test('score a gutterball frame', () => {
   const frame = [0, 0]
-  const expected = 10
+  const expected = 0
+  const actual = score.scoreFrame(frame)
+
+  expect(actual).toBe(expected)
+})
+
+test('a normal frame', () => {
+  const frame = [5, 2]
+  const expected = 7
   const actual = score.scoreFrame(frame)
 
   expect(actual).toBe(expected)
