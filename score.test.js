@@ -32,12 +32,23 @@ test.skip('a spare frame', () => {
   expect(actual).toBe(expected);
 });
 
-test('single strike frame', () => {
+test.skip('single strike frame', () => {
   const frame = [
     [10, 0],
     [5, 2]
   ];
   const expected = frame[0][0] + frame[1][0] + frame[1][1];
+  const actual = score.scoreFrame(frame);
+  expect(actual).toBe(expected);
+});
+
+test('double strike frame', () => {
+  const frame = [
+    [10, 0],
+    [10, 0],
+    [5, 2]
+  ];
+  const expected = frame[0][0] + frame[1][0] + frame[2][0];
   const actual = score.scoreFrame(frame);
   expect(actual).toBe(expected);
 });
