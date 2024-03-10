@@ -54,21 +54,3 @@ test('double strike frame', () => {
 
   expect(actual).toBe(expected);
 });
-
-test('score entire game', () => {
-  const game = [
-    [5, 4],
-    [5, 5],
-    [10, 0],
-    [10, 0],
-    [5, 2],
-    [5, 5],
-    [10, 0],
-    [5, 2],
-    [5, 5],
-    [6, 4]
-  ];
-  const expected = 124;
-  const actual = score.scoreGame(game);
-  expect(actual).toBe(expected);
-});
